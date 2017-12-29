@@ -36,9 +36,8 @@ pipeline {
 if [ ! -d ${env.BUILD_REPO_PATH}/zuul ]; then
     mkdir ${env.BUILD_REPO_PATH}/zuul
 fi
-yes | cp -rf ./target/zuul*exec.jar ${env.BUILD_REPO_PATH}/zuul/zuul.jar
+yes | cp -rf ./target/zuul*.jar ${env.BUILD_REPO_PATH}/zuul/zuul.jar
 yes | cp -rf zuul.dockerfile ${env.BUILD_REPO_PATH}/zuul
-yes | cp -rf docker-compose.yml ${env.BUILD_REPO_PATH}/zuul
 """
                     currentBuild.rawBuild.displayName = date
                 }
