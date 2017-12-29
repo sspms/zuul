@@ -1,0 +1,18 @@
+# Server settings (ServerProperties)
+server:
+  port: 8081
+  address: localhost
+spring:
+  application:
+    name: zuul
+zuul:
+  routes:
+    user_user:
+      path: /user/**
+      serviceId:  user
+    user_register:
+      path: /register/**
+      serviceId: user
+    community:
+      path: /community/**
+      serviceId:  community
