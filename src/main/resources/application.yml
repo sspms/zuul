@@ -33,3 +33,11 @@ zuul:
       path: /community/**
       serviceId: community
       stripPrefix: false
+    role_role:
+      path: /api/v1/roles/**
+      serviceId: role
+      stripPrefix: false
+    role_family:
+      path: /api/v1/family/**
+      serviceId: role
+      stripPrefix: false
